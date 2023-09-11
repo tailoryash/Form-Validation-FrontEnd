@@ -15,51 +15,73 @@
   </head>
   <body>
     <h1>Welcome to Promount Technologies</h1>
-    <h4>Employee management portal</h4>
 
-    <div class="row mx-auto col-10 col-md-8 col-lg-6">
-      <form action="#">
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" class="form-label"
-            >Employee Code</label
-          >
-          <input
-            type="number"
-            class="form-control"
-            id="empCode"
-            placeholder="Enter Employee Code here"
-          />
-        </div>
-        <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label"
-            >Full Name</label
-          >
-          <input
-            type="text"
-            class="form-control"
-            id="fullName"
-            placeholder="Enter Full name here"
-          />
-        </div>
-        <div class="mb-3">
-          <label for="exampleFormControlTextarea1" class="form-label"
-            >Tech Stack</label
-          >
-          <input
-            type="text"
-            class="form-control"
-            id="tech"
-            placeholder="Enter Tech stack here"
-          />
-        </div>
+    <div class="row mx-auto col-10 col-md-8 col-lg-6 card">
+      <div class="card-header text-center fw-bold blockquote">
+        Employee management portal
+      </div>
+      <div class="card-body">
+        <form action="#" id="empForm">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"
+              >Employee Code</label
+            >
+            <input
+              type="number"
+              class="form-control"
+              id="empCode"
+              placeholder="Enter Employee Code here"
+            />
+            <span id="errorMsgForCode"></span>
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label"
+              >Full Name</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="fullName"
+              placeholder="Enter Full name here"
+            />
+            <span id="errorMsgForName"></span>
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label"
+              >Tech Stack</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="tech"
+              placeholder="Enter Tech stack here"
+            />
+            <span id="errorMsgForTech"></span>
+          </div>
 
-        <div class="col-12">
-          <button class="btn btn-primary" type="submit" onclick="save()">
-            Submit
-          </button>
-          <button class="btn btn-secondary" type="reset">Reset</button>
+          <div class="col-12">
+            <button class="btn btn-primary" type="submit" onclick="save()">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="mt-5 col-12 card text-center">
+        <div class="card-header">List of Employees</div>
+        <div class="card-body">
+          <table border="2">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Code</th>
+                <th scope="col">Full Name</th>
+                <th scope="col">Tech Stack</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+          </table>
         </div>
-      </form>
+      </div>
     </div>
 
     <script
