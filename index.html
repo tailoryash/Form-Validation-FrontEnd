@@ -11,6 +11,7 @@
       crossorigin="anonymous"
     />
     <link href="/css/style.css" rel="stylesheet" />
+
     <script src="/js/script.js"></script>
   </head>
   <body>
@@ -31,6 +32,7 @@
               class="form-control"
               id="empCode"
               placeholder="Enter Employee Code here"
+              onblur="validateCode()"
             />
             <span id="errorMsgForCode"></span>
           </div>
@@ -43,6 +45,7 @@
               class="form-control"
               id="fullName"
               placeholder="Enter Full name here"
+              onblur="validateName()"
             />
             <span id="errorMsgForName"></span>
           </div>
@@ -55,6 +58,7 @@
               class="form-control"
               id="tech"
               placeholder="Enter Tech stack here"
+              onblur="validateTech()"
             />
             <span id="errorMsgForTech"></span>
           </div>
@@ -69,7 +73,7 @@
 
       <div class="mt-5 col-12 card text-center">
         <div class="card-header">List of Employees</div>
-        <div class="card-body">
+        <div class="row">
           <table border="2">
             <thead class="thead-dark">
               <tr>
